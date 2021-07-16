@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3923A83CDFF74EA91AD6DCC /* Pods_MultiThreed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DD163F9D1C1F0E1F6C1EC6 /* Pods_MultiThreed.framework */; };
 		F05D0F742694B9D900D42ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05D0F732694B9D900D42ACB /* AppDelegate.swift */; };
 		F05D0F762694B9D900D42ACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05D0F752694B9D900D42ACB /* ViewController.swift */; };
 		F05D0F792694B9D900D42ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05D0F772694B9D900D42ACB /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86D95B1F1C88CBC9313111C0 /* Pods-MultiThreed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiThreed.release.xcconfig"; path = "Target Support Files/Pods-MultiThreed/Pods-MultiThreed.release.xcconfig"; sourceTree = "<group>"; };
+		B16099A8DD94197133B8E8A1 /* Pods-MultiThreed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiThreed.debug.xcconfig"; path = "Target Support Files/Pods-MultiThreed/Pods-MultiThreed.debug.xcconfig"; sourceTree = "<group>"; };
+		C4DD163F9D1C1F0E1F6C1EC6 /* Pods_MultiThreed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiThreed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05D0F702694B9D900D42ACB /* MultiThreed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiThreed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05D0F732694B9D900D42ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F05D0F752694B9D900D42ACB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3923A83CDFF74EA91AD6DCC /* Pods_MultiThreed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7356C9B6AE08ECF2386132C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B16099A8DD94197133B8E8A1 /* Pods-MultiThreed.debug.xcconfig */,
+				86D95B1F1C88CBC9313111C0 /* Pods-MultiThreed.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB3134553EBE3DB1142175D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4DD163F9D1C1F0E1F6C1EC6 /* Pods_MultiThreed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F05D0F672694B9D900D42ACB = {
 			isa = PBXGroup;
 			children = (
 				F05D0F722694B9D900D42ACB /* MultiThreed */,
 				F05D0F712694B9D900D42ACB /* Products */,
+				7356C9B6AE08ECF2386132C1 /* Pods */,
+				DB3134553EBE3DB1142175D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F05D0F822694B9DA00D42ACB /* Build configuration list for PBXNativeTarget "MultiThreed" */;
 			buildPhases = (
+				DB46F61056B0F0CC18252209 /* [CP] Check Pods Manifest.lock */,
 				F05D0F6C2694B9D900D42ACB /* Sources */,
 				F05D0F6D2694B9D900D42ACB /* Frameworks */,
 				F05D0F6E2694B9D900D42ACB /* Resources */,
+				26B1A822FB444B45958D9D9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26B1A822FB444B45958D9D9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiThreed/Pods-MultiThreed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiThreed/Pods-MultiThreed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiThreed/Pods-MultiThreed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB46F61056B0F0CC18252209 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiThreed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F05D0F6C2694B9D900D42ACB /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		F05D0F832694B9DA00D42ACB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B16099A8DD94197133B8E8A1 /* Pods-MultiThreed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +371,7 @@
 		};
 		F05D0F842694B9DA00D42ACB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D95B1F1C88CBC9313111C0 /* Pods-MultiThreed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

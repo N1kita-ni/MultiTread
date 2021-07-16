@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
     var secVC: SecondViewController?
-    let imageLink = "https://thumb.tildacdn.com/tild6332-3265-4436-a636-323461643033/-/cover/720x720/center/center/-/format/webp/noroot.png"
+    let imageLink = "https://zoogalaktika.ru/assets/images/mammalia/primates/catarrhini/erythrocebus-patas/erythrocebus-patas_12.jpg"
     override func viewDidLoad() {
         super.viewDidLoad()
         secVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecVC") as? SecondViewController
@@ -20,15 +21,17 @@ class ViewController: UIViewController {
         
         _ = vc.view
         
-        DispatchQueue.global(qos: .background).async {
-            if let imageURL = URL(string: self.imageLink),
-                let imageData = try? Data(contentsOf: imageURL) {
-                let image = UIImage(data: imageData)
-                DispatchQueue.main.async {
-                     vc.imageView.image = image
-                }
-            }
-        }
+//        DispatchQueue.global(qos: .background).async {
+//            if let imageURL = URL(string: self.imageLink),
+//                let imageData = try? Data(contentsOf: imageURL) {
+//                let image = UIImage(data: imageData)
+//                DispatchQueue.main.async {
+//                     vc.imageView.image = image
+//                }
+//            }
+//        }
+//
+        vc.imageView.sd_setImage(with: URL(string: self.imageLink), completed: nil)
         navigationController?.show(vc, sender: nil)
     }
 }
